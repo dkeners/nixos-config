@@ -14,13 +14,13 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  #nix.optimise.automatic = true;
+  nix.optimise.automatic = true;
 
-  #nix.gc = {
-    #automatic = true;
-    #dates = "weekly";
-    #options = "--delete-older-than 30d";
-  #};
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
 
   # NVIDIA things:
   nixpkgs.config.allowUnfree = true;
@@ -43,7 +43,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
-  networking.hostName = "hypr-nixos"; # Define your hostname.
+  networking.hostName = "desktop-fnc99ap"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -133,8 +133,7 @@
     wget
     # Utilities
     git
-    gh
-    tailscale
+    # TUI Apps
     senpai
     # Apps
     spotify

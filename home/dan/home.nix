@@ -11,10 +11,18 @@
     userEmail = "contact@dankenerson.com";
   };
 
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper = {
+      enable = true;
+    };
+  };
+
   programs.bash = {
     enable = true;
     shellAliases = {
       sybau = "echo *akward silence*";
+      rebuild-desktop = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
     };
   };
 

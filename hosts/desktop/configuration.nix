@@ -142,6 +142,7 @@
     git
     btop
     tailscale
+    bottles
     # TUI Apps
     senpai
     # Apps
@@ -153,6 +154,7 @@
     waybar
     hyprpaper
     hyprpicker
+    hyprshot
     fuzzel
     swaynotificationcenter
     # Terminal Fun

@@ -18,7 +18,7 @@
     };
   };
 
-  programs.bash = {
+  home.shellAliases = {
     enable = true;
     shellAliases = {
       sybau = "echo *akward silence*";

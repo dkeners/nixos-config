@@ -28,6 +28,7 @@
 
   home.sessionVariables.NIXOS_OZONE_WL = "1";
   home.file.".config/hypr".source = ./config/hypr;
+  home.file.".config/btop/btop.conf".source = ./config/btop/btop.conf;
 
   home.pointerCursor = {
     name = "macOS";

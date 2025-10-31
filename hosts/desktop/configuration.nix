@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, apple-fonts, ... }:
 
 {
   imports =
@@ -136,14 +136,17 @@
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
     foot
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    # neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     # Utilities
     git
     btop
     tailscale
     bottles
+    pavucontrol
+    colmap
     # TUI Apps
+    lazygit
     senpai
     # Apps
     spotify
@@ -152,7 +155,7 @@
     # Hyprland/ui apps
     apple-cursor
     waybar
-    hyprpaper
+    swww
     hyprpicker
     hyprshot
     fuzzel
@@ -164,7 +167,21 @@
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    nerd-fonts.symbols-only
+    apple-fonts.packages.${system}.sf-pro-nerd
+    apple-fonts.packages.${system}.sf-mono-nerd
+    apple-fonts.packages.${system}.sf-compact
+    apple-fonts.packages.${system}.ny
   ];
+
+  fonts.fontconfig = {
+    enable = true;
+    defaultFonts = {
+      sansSerif = [ "SFProDisplay Nerd Font" ];
+      serif     = [ "NewYork" ];
+      monospace = [ "JetBrainsMono Nerd Font" ];
+    };
+  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
 

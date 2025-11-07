@@ -49,6 +49,7 @@
 
           nix.enable = true;
           rust.enable = true;
+          csharp.enable = true;
           php.enable = true;
           ts.enable = true;
           html.enable = true;
@@ -70,7 +71,6 @@
   home.file.".config/hypr".source = ./config/hypr;
   home.file.".config/btop/btop.conf".source = ./config/btop/btop.conf;
   home.file.".config/waybar".source = ./config/waybar;
-  # home.file.".config/nvim".source = ./config/nvim;
 
   home.pointerCursor = {
     name = "macOS";

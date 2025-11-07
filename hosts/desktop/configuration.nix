@@ -152,6 +152,8 @@
     spotify
     discord
     prismlauncher
+    godot
+    obsidian
     # Hyprland/ui apps
     apple-cursor
     waybar

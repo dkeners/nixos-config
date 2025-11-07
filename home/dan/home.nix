@@ -71,6 +71,7 @@
   home.file.".config/hypr".source = ./config/hypr;
   home.file.".config/btop/btop.conf".source = ./config/btop/btop.conf;
   home.file.".config/waybar".source = ./config/waybar;
+  home.file.".config/kitty".source = ./config/kitty;
 
   home.pointerCursor = {
     name = "macOS";

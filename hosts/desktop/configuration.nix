@@ -152,7 +152,8 @@
     spotify
     discord
     prismlauncher
-    godot
+    blender
+    godot-mono
     obsidian
     # Hyprland/ui apps
     apple-cursor

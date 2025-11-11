@@ -144,6 +144,7 @@
     tailscale
     bottles
     pavucontrol
+    tomat
     colmap
     # TUI Apps
     lazygit
@@ -155,6 +156,7 @@
     blender
     godot-mono
     obsidian
+    zotero
     # Hyprland/ui apps
     apple-cursor
     waybar

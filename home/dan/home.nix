@@ -72,6 +72,7 @@
   home.file.".config/btop/btop.conf".source = ./config/btop/btop.conf;
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/kitty".source = ./config/kitty;
+  home.file.".config/tomat".source = ./config/tomat;
 
   home.pointerCursor = {
     name = "macOS";

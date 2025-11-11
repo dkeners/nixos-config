@@ -13,7 +13,8 @@
         "custom/media"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+        "custom/tomat"
     ],
     "modules-right": [
         "mpd",
@@ -106,6 +107,15 @@
 	    "on-scroll-up": "tz_up",
 	    "on-scroll-down":  "tz_down"
 	}
+    },
+    "custom/tomat": {
+      "exec": "tomat status",
+      "interval": 1,
+      "return-type": "json",
+      "format": "{text}",
+      "tooltip": true,
+      "on-click": "tomat toggle",
+      "on-click-right": "tomat skip"
     },
     "mpd": {
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",

@@ -7,8 +7,10 @@
 
   programs.git = {
     enable = true;
-    userName = "Dan Kenerson";
-    userEmail = "contact@dankenerson.com";
+    settings = {
+      user.name = "Dan Kenerson";
+      user.email = "contact@dankenerson.com";
+    };
   };
 
   programs.gh = {

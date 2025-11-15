@@ -173,10 +173,10 @@
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
-    apple-fonts.packages.${system}.sf-pro-nerd
-    apple-fonts.packages.${system}.sf-mono-nerd
-    apple-fonts.packages.${system}.sf-compact
-    apple-fonts.packages.${system}.ny
+    apple-fonts.packages.${stdenv.hostPlatform.system}.sf-pro-nerd
+    apple-fonts.packages.${stdenv.hostPlatform.system}.sf-mono-nerd
+    apple-fonts.packages.${stdenv.hostPlatform.system}.sf-compact
+    apple-fonts.packages.${stdenv.hostPlatform.system}.ny
   ];
 
   fonts.fontconfig = {

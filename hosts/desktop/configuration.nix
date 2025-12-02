@@ -14,6 +14,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Silent Boot
+  boot.consoleLogLevel = 0;
+  boot.kernelParams = [ "quiet" "udev.log_level=3" ];
+
   nix.optimise.automatic = true;
 
   nix.gc = {
@@ -23,16 +27,28 @@
   };
 
   # NVIDIA things:
+  nix.settings = {
+    substituters = [ "https://cache.nixos-cuda.org" ];
+    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   hardware.graphics = {
     enable = true;
+    extraPackages = with pkgs; [
+      vulkan-loader
+      vulkan-validation-layers
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      vulkan-loader
+    ];
   };
 
   hardware.nvidia = {
     modesetting.enable = true;
 
-    powerManagement.enable = false;
+    powerManagement.enable = true;
 
     powerManagement.finegrained = false;
 
@@ -139,6 +155,7 @@
     # neovim # I am using NVF for editor install instead (nano as backup)
     wget
     # Utilities
+    cudaPackages.cudatoolkit
     git
     btop
     tailscale

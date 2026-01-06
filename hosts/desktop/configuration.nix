@@ -159,15 +159,17 @@
     git
     btop
     tailscale
+    pcmanfm
+    wineWowPackages.full
     bottles
     pavucontrol
     tomat
     colmap
+    rustdesk
     # TUI Apps
     lazygit
     senpai
     # Apps
-    spotify
     discord
     prismlauncher
     blender
@@ -219,8 +221,10 @@
 
   services.tailscale.enable = true;
 
+  services.udisks2.enable = true;
+
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

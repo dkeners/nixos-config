@@ -54,7 +54,7 @@
           rust.enable = true;
           csharp = {
             enable = true;
-            lsp.server = "omnisharp";
+            lsp.servers = [ "omnisharp" ];
           };
           php.enable = true;
           ts.enable = true;

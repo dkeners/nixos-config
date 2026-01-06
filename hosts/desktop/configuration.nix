@@ -165,7 +165,7 @@
     pavucontrol
     tomat
     colmap
-    rustdesk
+    rustdesk-flutter
     # TUI Apps
     lazygit
     senpai

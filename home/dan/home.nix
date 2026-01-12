@@ -41,6 +41,7 @@
         };
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
+        utility.sleuth.enable = true;
 
         lsp = {
           enable = true;
@@ -51,7 +52,10 @@
 
           nix.enable = true;
           rust.enable = true;
-          csharp.enable = true;
+          csharp = {
+            enable = true;
+            lsp.servers = [ "omnisharp" ];
+          };
           php.enable = true;
           ts.enable = true;
           html.enable = true;
@@ -86,4 +90,12 @@
   };
 
   services.swww.enable = true;
+  services.udiskie = {
+    enable = true;
+    settings = {
+      program_options = {
+        file_manager = "${pkgs.pcmanfm}/bin/pcmanfm";
+      };
+    };
+  };
 }

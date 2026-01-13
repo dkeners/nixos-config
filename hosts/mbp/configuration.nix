@@ -18,13 +18,14 @@
     options = "--delete-older-than 30d";
   };
 
+  # I know this is bad and I should use  some other way of  doing it but it works for now :)
   hardware.firmware = [
     (pkgs.stdenvNoCC.mkDerivation (final: {
       name = "brcm-firmware";
       src = ./firmware/brcm;
       installPhase = ''
         mkdir -p $out/lib/firmware/brcm
-        cp ${final.src}/* "$out/lib/firmware/brcm"
+        cp -r ${final.src}/. "$out/lib/firmware/brcm"
       '';
     }))
   ];

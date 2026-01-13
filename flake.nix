@@ -10,6 +10,7 @@
     # San Francisco Fonts | Apple Fonts
     apple-fonts.url= "github:Lyndeno/apple-fonts.nix";
     nvf.url = "github:notashelf/nvf";
+    # Stuff for mac
     nixos-hardware.url = "github:nixos/nixos-hardware";
   };
 

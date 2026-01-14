@@ -25,7 +25,7 @@
       src = ./firmware/brcm;
       installPhase = ''
         mkdir -p $out/lib/firmware/brcm
-        cp -r ${final.src}/. "$out/lib/firmware/brcm"
+        cp ${final.src}/* "$out/lib/firmware/brcm"
       '';
     }))
   ];
@@ -121,6 +121,8 @@
     apple-cursor
     waybar
     zotero
+    discord
+    obsidian
     swww
     hyprpicker
     hyprshot

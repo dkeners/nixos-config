@@ -163,6 +163,8 @@
     wineWowPackages.full
     bottles
     pavucontrol
+    playerctl
+    brightnessctl
     tomat
     colmap
     rustdesk-flutter

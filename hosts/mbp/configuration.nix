@@ -118,6 +118,8 @@
     git
     btop
     pavucontrol
+    playerctl
+    brightnessctl
     apple-cursor
     waybar
     zotero

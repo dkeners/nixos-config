@@ -131,7 +131,7 @@
       "original": {
         "owner": "nixos",
         "repo": "nixos-hardware",
-	"type": "github"
+        "type": "github"
       }
     },
     "nixpkgs": {

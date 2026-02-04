@@ -43,7 +43,7 @@
   networking.networkmanager.enable = true;
 
   # Set your time zone.
-  time.timeZone = "Europe/Zurich";
+  time.timeZone = "Europe/London";
 
   programs.hyprland = {
     enable = true;

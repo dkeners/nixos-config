@@ -157,7 +157,7 @@
     # Utilities
     cudaPackages.cudatoolkit
     git
-    btop
+    btop-cuda
     tailscale
     pcmanfm
     wineWowPackages.full

@@ -82,6 +82,7 @@
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/kitty".source = ./config/kitty;
   home.file.".config/tomat".source = ./config/tomat;
+  home.file.".config/opencode".source = ./config/opencode;
 
   home.pointerCursor = {
     name = "macOS";

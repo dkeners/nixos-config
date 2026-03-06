@@ -42,6 +42,22 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
+  # Configure bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        # Shows battery percent of connected devices:
+        Experimental = true;
+      };
+      Policy = {
+        # Enable all controllers when they are found:
+        AutoEnable = true;
+      };
+    };
+  };
+
   # Set your time zone.
   time.timeZone = "Europe/London";
 
@@ -84,8 +100,6 @@
   # services.printing.enable = true;
 
   # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -125,6 +139,7 @@
     zotero
     discord
     obsidian
+    remmina
     swww
     hyprpicker
     hyprshot
@@ -132,6 +147,8 @@
     swaynotificationcenter
     fastfetchMinimal
     lazygit
+    opencode
+    kew
   ];
 
   fonts.packages = with pkgs; [
@@ -163,6 +180,27 @@
   # };
 
   # List services that you want to enable:
+
+  services.tlp = {
+    enable = true;
+    settings = {
+      CPU_SCALING_GOVERNOR_ON_AC = "performance";
+      CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+      CPU_MIN_PERF_ON_AC = 0;
+      CPU_MAX_PERF_ON_AC = 100;
+      CPU_MIN_PERF_ON_BAT = 0;
+      CPU_MAX_PERF_ON_BAT = 20;
+
+     #Optional helps save long term battery health
+     START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+     STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+    };
+  };
 
   # Enable the OpenSSH daemon.
 

@@ -194,11 +194,21 @@
       CPU_MAX_PERF_ON_AC = 100;
       CPU_MIN_PERF_ON_BAT = 0;
       CPU_MAX_PERF_ON_BAT = 20;
+    };
+  };
 
-     #Optional helps save long term battery health
-     START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-     STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
-
+  # Battery charge limit via applesmc (TLP doesn't support the T2 non-standard path)
+  # Once upstream patches land (kernel 6.19+), this can be replaced with TLP's native settings
+  systemd.tmpfiles.settings = {
+    "t2linux-battery-limit" = {
+      "/sys/bus/acpi/drivers/applesmc/APP0001:00/battery_charge_limit" = {
+        "f+" = {
+          group = "root";
+          user = "root";
+          mode = "0644";
+          argument = "80";
+        };
+      };
     };
   };
 

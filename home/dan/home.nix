@@ -47,7 +47,7 @@
           enable = true;
         };
 
-        languages  = {
+        languages = {
           enableTreesitter = true;
 
           nix.enable = true;

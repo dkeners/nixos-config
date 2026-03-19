@@ -2,13 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, apple-fonts, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  apple-fonts,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -16,7 +22,10 @@
 
   # Silent Boot
   boot.consoleLogLevel = 0;
-  boot.kernelParams = [ "quiet" "udev.log_level=3" ];
+  boot.kernelParams = [
+    "quiet"
+    "udev.log_level=3"
+  ];
 
   nix.optimise.automatic = true;
 
@@ -62,7 +71,7 @@
   networking.hostName = "desktop-fnc99ap"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true; # Easiest to use and most distros use this by default.
 
   # Set your time zone.
   time.timeZone = "Europe/London";
@@ -98,9 +107,6 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
-  
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -124,7 +130,7 @@
 
   services.xserver = {
     enable = true;
-    videoDrivers = ["nvidia"];
+    videoDrivers = [ "nvidia" ];
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
     # windowManager.qtile.enable = true;
@@ -160,7 +166,6 @@
     btop-cuda
     tailscale
     pcmanfm
-    wineWowPackages.full
     bottles
     pavucontrol
     playerctl
@@ -204,12 +209,15 @@
     enable = true;
     defaultFonts = {
       sansSerif = [ "SFProDisplay Nerd Font" ];
-      serif     = [ "NewYork" ];
+      serif = [ "NewYork" ];
       monospace = [ "JetBrainsMono Nerd Font" ];
     };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ]; 
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -259,4 +267,3 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
 }
-

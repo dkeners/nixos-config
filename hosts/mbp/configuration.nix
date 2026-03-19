@@ -2,13 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ config, lib, pkgs, apple-fonts, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  apple-fonts,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   nix.optimise.automatic = true;
 
@@ -89,9 +95,6 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-
-  
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -164,12 +167,15 @@
     enable = true;
     defaultFonts = {
       sansSerif = [ "SFProDisplay Nerd Font" ];
-      serif     = [ "NewYork" ];
+      serif = [ "NewYork" ];
       monospace = [ "JetBrainsMono Nerd Font" ];
     };
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -249,4 +255,3 @@
   system.stateVersion = "25.11"; # Did you read the comment?
 
 }
-

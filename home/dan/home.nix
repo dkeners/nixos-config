@@ -93,7 +93,7 @@
     x11.enable = true;
   };
 
-  services.swww.enable = true;
+  services.awww.enable = true;
   services.udiskie = {
     enable = true;
     settings = {

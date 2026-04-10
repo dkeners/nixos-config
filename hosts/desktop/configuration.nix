@@ -186,7 +186,7 @@
     # Hyprland/ui apps
     apple-cursor
     waybar
-    swww
+    awww
     hyprpicker
     hyprshot
     fuzzel

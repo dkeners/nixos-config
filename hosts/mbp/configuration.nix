@@ -102,10 +102,27 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
+  # avahi required for service discovery
+  services.avahi.enable = true;
+
   # Enable sound.
   services.pipewire = {
     enable = true;
     pulse.enable = true;
+
+    # Enable Airplay
+    # opens UDP ports 6001-6002
+    raopOpenFirewall = true;
+
+    extraConfig.pipewire = {
+      "10-airplay" = {
+        "context.modules" = [
+          {
+            name = "libpipewire-module-raop-discover";
+          }
+        ];
+      };
+    };
   };
 
   # Enable touchpad support (enabled default in most desktopManager).

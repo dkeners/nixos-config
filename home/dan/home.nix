@@ -60,7 +60,7 @@
             enable = true;
             lsp.servers = [ "intelephense" ];
           };
-          ts.enable = true;
+          typescript.enable = true;
           html.enable = true;
           markdown.enable = true;
         };

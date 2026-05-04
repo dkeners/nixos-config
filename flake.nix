@@ -1,6 +1,11 @@
 {
   description = "Dan's super awesome NixOS configurations and dotfiles.";
 
+  nixConfig = {
+    extra-substituters = ["https://cache.soopy.moe"];
+    extra-trusted-public-keys = ["cache.soopy.moe-1:0RZVsQeR+GOh0VQI9rvnHz55nVXkFardDqfm4+afjPo="];
+  };
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-unstable";
     home-manager = {
@@ -11,7 +16,8 @@
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
     nvf.url = "github:notashelf/nvf";
     # Stuff for mac
-    nixos-hardware.url = "github:nixos/nixos-hardware";
+    # nixos-hardware.url = "github:nixos/nixos-hardware";
+    nixos-hardware.url = "github:soopyc/nixos-hardware/apple-t2-updates";
   };
 
   outputs =

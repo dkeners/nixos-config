@@ -165,7 +165,9 @@
     waybar
     zotero
     discord
+    halloy
     obsidian
+    feishin
     remmina
     awww
     hyprpicker

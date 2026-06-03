@@ -189,6 +189,9 @@
     godot-mono
     obsidian
     zotero
+    obsidian
+    feishin
+    remmina
     # Hyprland/ui apps
     apple-cursor
     waybar

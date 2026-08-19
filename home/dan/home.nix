@@ -98,7 +98,7 @@
     enable = true;
     settings = {
       program_options = {
-        file_manager = "${pkgs.pcmanfm}/bin/pcmanfm";
+        file_manager = "${pkgs.ranger}/bin/ranger";
       };
     };
   };

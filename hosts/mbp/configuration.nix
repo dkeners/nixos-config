@@ -168,7 +168,13 @@
     zotero
     discord
     halloy
+    signal-desktop
+    teams-for-linux
+    collabora-desktop
+    blender
+    drawio
     obsidian
+    typst
     feishin
     remmina
     awww
@@ -185,6 +191,7 @@
   ];
 
   fonts.packages = with pkgs; [
+    corefonts
     nerd-fonts.jetbrains-mono
     nerd-fonts.symbols-only
     apple-fonts.packages.${stdenv.hostPlatform.system}.sf-pro-nerd

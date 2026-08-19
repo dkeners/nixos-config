@@ -201,7 +201,7 @@
     fuzzel
     swaynotificationcenter
     # Terminal Fun
-    fastfetchMinimal
+    fastfetch
     kew
   ];
 

@@ -126,6 +126,7 @@
   };
 
   security.rtkit.enable = true;
+  security.pam.services.hyprlock = {};
 
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput = {
@@ -183,7 +184,7 @@
     fuzzel
     swaynotificationcenter
     ranger
-    fastfetchMinimal
+    fastfetch
     lazygit
     opencode
     unzip

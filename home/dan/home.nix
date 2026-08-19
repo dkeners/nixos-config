@@ -20,6 +20,8 @@
     };
   };
 
+  programs.hyprlock.enable = true;
+
   programs.nvf = {
     enable = true;
     # your settings need to go into the settings attribute set
@@ -73,6 +75,7 @@
     shellAliases = {
       sybau = "echo *akward silence*";
       rebuild-desktop = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
+      rebuild-mbp = "sudo nixos-rebuild switch --flake ~/nixos#mbp";
     };
   };
 
@@ -85,6 +88,7 @@
   home.file.".config/opencode".source = ./config/opencode;
 
   home.pointerCursor = {
+    enable = true;
     name = "macOS";
     size = 24;
     package = pkgs.apple-cursor;

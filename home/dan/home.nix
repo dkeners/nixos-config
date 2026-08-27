@@ -30,6 +30,7 @@
       vim = {
         viAlias = false;
         vimAlias = true;
+        spellcheck.enable = true;
 
         theme = {
           enable = true;

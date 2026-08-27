@@ -173,6 +173,7 @@
     teams-for-linux
     collabora-desktop
     blender
+    cura-appimage
     drawio
     obsidian
     typst
@@ -184,6 +185,7 @@
     fuzzel
     swaynotificationcenter
     ranger
+    nautilus
     fastfetch
     lazygit
     opencode

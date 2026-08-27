@@ -98,6 +98,25 @@
     x11.enable = true;
   };
 
+  gtk = {
+    enable = true;
+
+    theme = {
+      package = pkgs.whitesur-gtk-theme;
+      name = "WhiteSur-Light-xhdpi";
+    };
+
+    iconTheme = {
+      package = pkgs.whitesur-icon-theme;
+      name = "WhiteSur-light";
+    };
+
+    gtk4.theme = {
+      package = pkgs.whitesur-gtk-theme;
+      name = "WhiteSur-Light-xhdpi";
+    };
+  };
+
   services.awww.enable = true;
   services.udiskie = {
     enable = true;

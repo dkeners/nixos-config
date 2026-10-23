@@ -65,7 +65,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Europe/London";
+  time.timeZone = "America/New_York";
 
   programs.hyprland = {
     enable = true;

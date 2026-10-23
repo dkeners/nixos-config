@@ -40,7 +40,7 @@
 
         statusline.lualine = {
           enable = true;
-          theme = "onedark";
+          setupOpts.options.theme = "onedark";
         };
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;

@@ -166,7 +166,7 @@
     brightnessctl
     apple-cursor
     waybar
-    zotero
+    # zotero
     discord
     halloy
     signal-desktop

@@ -17,7 +17,8 @@
     nvf.url = "github:notashelf/nvf";
     # Stuff for mac
     # nixos-hardware.url = "github:nixos/nixos-hardware";
-    nixos-hardware.url = "github:soopyc/nixos-hardware/apple-t2-updates";
+    # nixos-hardware.url = "github:soopyc/nixos-hardware";
+    nixos-hardware.url = "github:nixos/nixos-hardware/pull/1934/head";
   };
 
   outputs =

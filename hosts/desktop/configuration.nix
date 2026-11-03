@@ -47,6 +47,7 @@
     trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
   };
 
+  nixpkgs.config.cudaSupport = true;
   nixpkgs.config.allowUnfree = true;
 
   hardware.graphics = {
@@ -179,6 +180,11 @@
     tomat
     colmap
     rustdesk-flutter
+    # LLM things
+    pi-coding-agent
+    llama-cpp
+    # vllm
+    llmfit
     # TUI Apps
     lazygit
     senpai
@@ -204,6 +210,7 @@
     fastfetch
     kew
   ];
+  # boot.loader.systemd-boot.enable = true;
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono

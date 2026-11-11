@@ -71,13 +71,12 @@
     };
   };
 
+  programs.bash.enable = true;
+
   home.shellAliases = {
-    enable = true;
-    shellAliases = {
-      sybau = "echo *akward silence*";
-      rebuild-desktop = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
-      rebuild-mbp = "sudo nixos-rebuild switch --flake ~/nixos#mbp";
-    };
+    lg = "lazygit";
+    rebuild-desktop = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
+    rebuild-mbp = "sudo nixos-rebuild switch --flake ~/nixos#mbp";
   };
 
   home.sessionVariables.NIXOS_OZONE_WL = "1";

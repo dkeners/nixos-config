@@ -188,7 +188,7 @@
     nautilus
     fastfetch
     lazygit
-    opencode
+    pi-coding-agent
     unzip
     kew
   ];

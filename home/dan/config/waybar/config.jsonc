@@ -81,8 +81,8 @@
 	"format": "{:%H:%M (%Z)}",
 	// "tooltip-format": "{tz_list}",
 	"timezones": [
-	    "Europe/London",
 	    "America/New_York",
+	    "Europe/London",
 	    "Europe/Zurich",
 	    "America/Los_Angeles"
 	],
